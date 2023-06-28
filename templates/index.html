@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ name }}'s Watchlist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <link rel="icon" href="{{ url_for('static', filename='harry-potter.ico') }}">
 </head>
 <body>
-    <h2>{{ name }}'s Watchlist</h2>
+    <h2>
+        <img src="{{ url_for('static', filename='images/harry-potter.png') }}" class="avatar" alt="Avatar">
+        {{ name }}'s Watchlist
+    </h2>
 
     {# 使用 length 过滤器获取变量 movies 的长度 #}
     <p>{{ movies|length }} Titles</p>
-    <ul>
+    <ul class="movie_list">
         {% for movie in movies %}   {# 迭代 movies#}
         <li>{{ movie.title }} - {{ movie.year }}</li> {# 等同于 movie['title'] #}
         {% endfor %} {# 使用 endfor 标签结束 for 循环#}
     </ul>
+
+    <iframe alt="People Applauding" class= "gif" src="https://giphy.com/embed/26gN16cJ6gy4LzZSw" frameBorder="0" allowFullScreen></iframe>
+
+    <footer>
+        <small>&copy; 2023<a href="http://helloflask.com/book/3">HelloFlask</a></small>
+    </footer>
 </body>
 </html>

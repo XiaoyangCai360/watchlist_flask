@@ -1,0 +1,46 @@
+/* 页面整体 */
+body{
+    margin:auto;
+    max-width: 580px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 页脚 */
+footer {
+    color: #888;
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 哈利波特头像 */
+.avatar {
+    width: 40px;
+}
+/* 哈利波特动图 */
+.gif {
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+/* 电影列表 */
+.movie_list {
+    list-style-type: none;
+    padding: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.movie_list li {
+    padding: 12px 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.movie_list li :last-child {
+    border-bottom: none;
+}
+
+.movie_list li :hover {
+    background-color: #f8f9fa;
+}
